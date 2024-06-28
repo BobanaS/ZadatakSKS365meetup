@@ -27,7 +27,4 @@ automatskih testova.
 
 # Contact Information
 
-# LinkedIn: Bobana Simikic / www.linkedin.com/in/bobana-simikic160719918
-
-# Email: bobana.simikic@gmail.com
-   
+# LinkedIn: Bobana Simikic / www.linkedin.com/in/bobana-simikic160719918   
