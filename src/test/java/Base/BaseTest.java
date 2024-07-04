@@ -1,5 +1,6 @@
 package Base;
 
+import Pages.AccountPage;
 import Pages.CreateAnAccountPage;
 import Pages.HomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -9,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import java.time.Duration;
@@ -20,9 +22,10 @@ public class BaseTest {
     public WebDriverWait wait;
     public HomePage homePage;
     public CreateAnAccountPage createAnAccountPage;
+    public AccountPage accountPage;
     public String homePageURL = "https://magento.softwaretestingboard.com/";
     public String createAnAccountPageURL = "https://magento.softwaretestingboard.com/customer/account/create/";
-
+    public String accountPageURL="https://magento.softwaretestingboard.com/customer/account/";
 
     @BeforeClass
     public void setUp() {
@@ -52,14 +55,17 @@ public class BaseTest {
 
     /*
       Automates the login process for a test user.
-      This method inputs the username and password, and then clicks the login button.
+      This method inputs credentials, and then clicks the create account  button.
       It is used to quickly log in a standard test user for automated tests.
      */
-  /*  public void testUserLogIn() {
-        logInPage.inputUserName("standard_user");
-        logInPage.inputPassword("secret_sauce");
-        logInPage.clickOnLogInButton();
-    }*/
+   public void testcreateAccount() {
+        createAnAccountPage.inputFirstname("Bobana");
+        createAnAccountPage.inputLastname("Simikic");
+        createAnAccountPage.inputemail("bobi@simi.com");
+        createAnAccountPage.inputPassword("bobi.QA1");
+        createAnAccountPage.inputConfirmpassword("bobi.QA1");
+        createAnAccountPage.clickOnButton();
+    }
     /*
       Checks if the specified web element is displayed on the page.
       This method returns true if the element is visible, and false otherwise.
@@ -72,10 +78,10 @@ public class BaseTest {
     This method is executed once after all test methods in this class have been run.
     It closes driver
      */
-/*    @AfterClass
+      @AfterClass
     public void theEndOfAllTest() {
-        driver.quit();
+    //    driver.quit();
     }
-*/
+
 }
 
