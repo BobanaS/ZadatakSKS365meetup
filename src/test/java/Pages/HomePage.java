@@ -13,21 +13,17 @@ public class HomePage extends BaseTest {
     }
 
 
-    @FindBy(className = "authorization-link")
-    public List<WebElement> links;
+    @FindBy(linkText = "Create an Account")
+    public WebElement link;
 
     //-----------------------------------
     public boolean linksAreThere() {
-        return elementDisplayed(links.get(0));
+        return elementDisplayed(link);
     }
 
-    public void clickOnLink(String option) {
-        for (WebElement opcija : links) {
-            if (opcija.getText().equals(option)) {
-                opcija.click();
-                break;
-            }
-
-        }
+    public void clickOnCreateAnAccount(){
+        link.click();
     }
+
+
 }

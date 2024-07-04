@@ -1,5 +1,6 @@
 package Base;
 
+import Pages.CreateAnAccountPage;
 import Pages.HomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.JavascriptExecutor;
@@ -18,6 +19,7 @@ public class BaseTest {
     public static WebDriver driver;
     public WebDriverWait wait;
     public HomePage homePage;
+    public CreateAnAccountPage createAnAccountPage;
     public String homePageURL = "https://magento.softwaretestingboard.com/";
     public String createAnAccountPageURL = "https://magento.softwaretestingboard.com/customer/account/create/";
 
