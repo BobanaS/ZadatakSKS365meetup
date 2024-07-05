@@ -15,6 +15,8 @@ public class HomePage extends BaseTest {
 
     @FindBy(linkText = "Create an Account")
     public WebElement link;
+    @FindBy(className = "authorization-link")
+    public WebElement signInlink;
 
     //-----------------------------------
     public boolean linksAreThere() {
@@ -24,6 +26,8 @@ public class HomePage extends BaseTest {
     public void clickOnCreateAnAccount(){
         link.click();
     }
-
+    public void clickOnSignIn(){
+        signInlink.click();
+    }
 
 }

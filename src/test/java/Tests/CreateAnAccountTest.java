@@ -119,7 +119,7 @@ public class CreateAnAccountTest extends BaseTest {
     public void userCreateValidAccount(){
         createAnAccountPage.inputFirstname("Bobana");
         createAnAccountPage.inputLastname("Simikic");
-        createAnAccountPage.inputemail("bobi@simi.com");
+        createAnAccountPage.inputemail("bobii@simi.com");
         createAnAccountPage.inputPassword("bobi.QA1");
         createAnAccountPage.inputConfirmpassword("bobi.QA1");
         createAnAccountPage.clickOnButton();

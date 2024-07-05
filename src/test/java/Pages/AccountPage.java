@@ -21,7 +21,7 @@ public class AccountPage extends BaseTest {
     public List<WebElement> options;
     public String myAccounttxt="My Account";
     public String myWishListtxt="My Wish List";
-    public String signOuttxt="Sign Out ";
+    public String signOuttxt=" Sign Out ";
     //--------------------------------------
     public boolean myAccountIsDisplayed(){
         return elementDisplayed(myAccount);
@@ -43,9 +43,10 @@ public class AccountPage extends BaseTest {
     }
     public void clickOnSideBarItem(String option) {
         for(WebElement opcija : options) {
-            if(opcija.getText().equals(option)) {
+            if(opcija.getText().equalsIgnoreCase(option)) {
                 opcija.click();
                 break;
+
             }
         }
     }

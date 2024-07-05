@@ -3,6 +3,7 @@ package Base;
 import Pages.AccountPage;
 import Pages.CreateAnAccountPage;
 import Pages.HomePage;
+import Pages.SignInPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -23,10 +24,12 @@ public class BaseTest {
     public HomePage homePage;
     public CreateAnAccountPage createAnAccountPage;
     public AccountPage accountPage;
+    public SignInPage signInPage;
     public String homePageURL = "https://magento.softwaretestingboard.com/";
     public String createAnAccountPageURL = "https://magento.softwaretestingboard.com/customer/account/create/";
     public String accountPageURL="https://magento.softwaretestingboard.com/customer/account/";
-
+    public String signInPageURL="https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/";
+    public String signOutPageURL="https://magento.softwaretestingboard.com/customer/account/logoutSuccess/";
     @BeforeClass
     public void setUp() {
 
@@ -58,13 +61,10 @@ public class BaseTest {
       This method inputs credentials, and then clicks the create account  button.
       It is used to quickly log in a standard test user for automated tests.
      */
-   public void testcreateAccount() {
-        createAnAccountPage.inputFirstname("Bobana");
-        createAnAccountPage.inputLastname("Simikic");
-        createAnAccountPage.inputemail("bobi@simi.com");
-        createAnAccountPage.inputPassword("bobi.QA1");
-        createAnAccountPage.inputConfirmpassword("bobi.QA1");
-        createAnAccountPage.clickOnButton();
+   public void testerAcountloggIn() {
+        signInPage.inputEmail("bobi@simi.com");
+        signInPage.inputPassword("bobi.QA1");
+        signInPage.signInClick();
     }
     /*
       Checks if the specified web element is displayed on the page.
