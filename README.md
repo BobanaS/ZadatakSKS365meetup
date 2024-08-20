@@ -22,8 +22,7 @@ napraviti automatski test, koristite neki profil koji cete napraviti sami rucno 
 automatskih testova.
 2. Valid / Invalid Login Tests – pokriti sto vise opcija uspesnog i neuspesnog logovanja
 3. Logout Test
-4. Verifikovanje man/woman stranica i elemenata na njima
-5. Izvrsiti konacnu kupovinu vise od 5 prozivoda
+
 
 # Contact Information
 
